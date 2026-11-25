@@ -1,0 +1,68 @@
+{
+  "seed": 17,
+  "steps": 400,
+  "batch_size": 8,
+  "learning_rate": 0.003,
+  "corpus_sha256": "1b604b2c3f80d05a444a1449ff3a4f58305ae2f2b0d5b7c23c428ef7bd926ad2",
+  "documents": {
+    "train": 30,
+    "validation": 6
+  },
+  "next_token_targets": {
+    "train": 4884,
+    "validation": 897
+  },
+  "parameters": 79584,
+  "vocabulary": 448,
+  "best_step": 250,
+  "best_validation_loss": 3.8391716855026807,
+  "validation_perplexity": 46.48695267108831,
+  "history": [
+    {
+      "step": 0,
+      "train_loss": 6.112136765448018,
+      "validation_loss": 6.11679329122588
+    },
+    {
+      "step": 50,
+      "train_loss": 4.844324299685785,
+      "validation_loss": 4.875449658503368
+    },
+    {
+      "step": 100,
+      "train_loss": 4.041560756242442,
+      "validation_loss": 4.238349361164514
+    },
+    {
+      "step": 150,
+      "train_loss": 3.6157497143667316,
+      "validation_loss": 3.997504341695354
+    },
+    {
+      "step": 200,
+      "train_loss": 3.3123421076377038,
+      "validation_loss": 3.8454616154848265
+    },
+    {
+      "step": 250,
+      "train_loss": 3.101529356742081,
+      "validation_loss": 3.8391716855026807
+    },
+    {
+      "step": 300,
+      "train_loss": 2.8794160011261822,
+      "validation_loss": 3.9298021636546125
+    },
+    {
+      "step": 350,
+      "train_loss": 2.719213370950763,
+      "validation_loss": 4.013167449861864
+    },
+    {
+      "step": 400,
+      "train_loss": 2.5214689580462784,
+      "validation_loss": 4.178828275589108
+    }
+  ],
+  "wall_seconds": 9.600311723000004
+}

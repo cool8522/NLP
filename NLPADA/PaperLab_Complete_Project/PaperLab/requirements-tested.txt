@@ -1,0 +1,10 @@
+# Reference environment used for the measured run. See requirements.txt for the ordinary install.
+numpy==2.3.5
+pypdf==6.21.4
+fastapi==0.141.1
+uvicorn==0.52.1
+threadpoolctl==3.6.0
+transformers==4.56.2
+sentencepiece==0.2.3
+safetensors==0.8.0
+# torch==2.6.0+cpu was installed from the official CPU wheel index.

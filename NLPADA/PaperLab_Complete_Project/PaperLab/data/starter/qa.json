@@ -1,0 +1,15 @@
+[
+  {"question":"What was the alarm threshold in the distance experiment?","file":"sensor_filter.pdf","page":1,"answers":["80 centimetres","80 centimeters","80 cm"]},
+  {"question":"Which statistic was the distance filter based on?","file":"sensor_filter.pdf","page":1,"answers":["median","median filter","centred median filter"]},
+  {"question":"What was the filtered distance at the spike?","file":"sensor_filter.pdf","page":2,"answers":["43 centimetres","43 centimeters","43 cm","43"]},
+  {"question":"How many filtered alarms remained on comparable interior positions?","file":"sensor_filter.pdf","page":2,"answers":["0","zero","none"]},
+  {"question":"Which phrase was used as the boundary probe?","file":"window_overlap.pdf","page":1,"answers":["maple oak","the phrase maple oak"]},
+  {"question":"What was the passage width in the boundary experiment?","file":"window_overlap.pdf","page":1,"answers":["four tokens","4 tokens","four","4"]},
+  {"question":"How many passages did the overlapping index store?","file":"window_overlap.pdf","page":2,"answers":["five passages","five","5"]},
+  {"question":"How many questions did the ranking collection contain?","file":"retrieval_ranks.pdf","page":1,"answers":["four questions","four","4"]},
+  {"question":"What was the mean reciprocal rank?","file":"retrieval_ranks.pdf","page":2,"answers":["0.4375"]},
+  {"question":"What was the hit rate at cutoff three?","file":"retrieval_ranks.pdf","page":2,"answers":["0.50","0.5","50%"]},
+  {"question":"Which chemical element powers a nuclear submarine?","file":null,"page":null,"answers":[]},
+  {"question":"Who manufactured the distance sensor?","file":null,"page":null,"answers":[]},
+  {"question":"What was the GPU memory usage of the overlapping index?","file":null,"page":null,"answers":[]}
+]

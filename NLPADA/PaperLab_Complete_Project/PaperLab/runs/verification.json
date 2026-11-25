@@ -1,0 +1,37 @@
+{
+  "automated_tests": 22,
+  "passed": 22,
+  "finite_difference_coordinates": 80,
+  "max_gradient_absolute_error": 5.7e-10,
+  "browser_ui": "Not visually verified: execution processes isolate localhost; cloud browser could not access it and blocked observing the resulting error page. No bypass attempted.",
+  "api": "FastAPI TestClient exercised dashboard delivery, PDF retrieval/upload, question answering, invalid input and origin checks.",
+  "http_smoke": {
+    "network_http_status": true,
+    "extractive": {
+      "status": "answered",
+      "text": "PAPERLAB / TEACHING COLLECTION Detecting a distance spike The alarm threshold was 80 centimetres",
+      "citation": "sensor_filter.pdf, p. 1"
+    },
+    "flan": {
+      "status": "answered",
+      "text": "80 centimetres",
+      "citation": "sensor_filter.pdf, p. 1"
+    }
+  },
+  "notebook": {
+    "code_cells_executed": 13,
+    "errors": 0,
+    "execution_method": "Sequential in-process IPython",
+    "optional_flan_cell_enabled": false
+  },
+  "optional_data": {
+    "published_pdfs_downloaded_and_parsed": 3,
+    "qasper_train_abstracts": 200,
+    "qasper_validation_abstracts": 50,
+    "not_included_in_zip": true
+  },
+  "static_checks": {
+    "python_compile": true,
+    "javascript_syntax": true
+  }
+}

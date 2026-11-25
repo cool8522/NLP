@@ -1,0 +1,31 @@
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+test_answer_and_empty_input (test_api.ApiTests.test_answer_and_empty_input) ... ok
+test_dashboard_and_paper (test_api.ApiTests.test_dashboard_and_paper) ... ok
+test_mutation_origin_guard (test_api.ApiTests.test_mutation_origin_guard) ... ok
+test_upload_endpoint (test_api.ApiTests.test_upload_endpoint) ... ok
+test_batches_do_not_cross_documents (test_core.DataTests.test_batches_do_not_cross_documents) ... ok
+test_chunk_overlap_and_page_identity (test_core.DataTests.test_chunk_overlap_and_page_identity) ... ok
+test_duplicate_cross_split_rejected (test_core.DataTests.test_duplicate_cross_split_rejected) ... ok
+test_attention_cannot_see_future (test_core.ModelTests.test_attention_cannot_see_future) ... ok
+test_bad_token_ids_rejected (test_core.ModelTests.test_bad_token_ids_rejected) ... ok
+test_checkpoint_preserves_logits_and_tokenizer (test_core.ModelTests.test_checkpoint_preserves_logits_and_tokenizer) ... ok
+test_manual_gradients_finite_difference (test_core.ModelTests.test_manual_gradients_finite_difference) ... ok
+test_padding_has_no_loss_gradient (test_core.ModelTests.test_padding_has_no_loss_gradient) ... ok
+test_all_ranking_modes_and_distinct_pages (test_core.RetrievalAndEvidenceTests.test_all_ranking_modes_and_distinct_pages) ... ok
+test_flan_budget_keeps_question (test_core.RetrievalAndEvidenceTests.test_flan_budget_keeps_question) ... ok
+test_hallucinated_or_invented_context_rejected (test_core.RetrievalAndEvidenceTests.test_hallucinated_or_invented_context_rejected) ... ok
+test_low_coverage_and_attribute_abstention (test_core.RetrievalAndEvidenceTests.test_low_coverage_and_attribute_abstention) ... ok
+test_numeric_span_boundaries (test_core.RetrievalAndEvidenceTests.test_numeric_span_boundaries) ... ok
+test_ollama_is_local (test_core.RetrievalAndEvidenceTests.test_ollama_is_local) ... ok
+test_upload_roundtrip_duplicates_and_paths (test_core.ServiceTests.test_upload_roundtrip_duplicates_and_paths) ... ok
+test_invalid_merge (test_core.TokenizerTests.test_invalid_merge) ... ok
+test_reproducible_merges_and_serialization (test_core.TokenizerTests.test_reproducible_merges_and_serialization) ... ok
+test_unicode_roundtrip (test_core.TokenizerTests.test_unicode_roundtrip) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.268s
+
+OK
+
+Finite differences: 80 coordinates, max absolute error 5.7e-10

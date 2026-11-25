@@ -1,0 +1,1187 @@
+{
+  "scope": "3 teaching PDFs, 6 pages, 10 answerable questions and 3 unanswerable questions; these fixtures were visible during development.",
+  "limitations": "Tiny development set. No held-out QA test, no human relevance study, and no claim of research novelty or general accuracy. Literal-span checks do not establish entailment.",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "cpu_count": 9,
+    "torch_threads": 2,
+    "versions": {
+      "numpy": "2.3.5",
+      "pypdf": "6.21.4",
+      "fastapi": "0.141.1",
+      "uvicorn": "0.52.1",
+      "threadpoolctl": "3.6.0",
+      "torch": "2.6.0+cpu",
+      "transformers": "4.56.2",
+      "sentencepiece": "0.2.3",
+      "safetensors": "0.8.0"
+    }
+  },
+  "pdf_extraction_ms": 15.688523000108034,
+  "chunks": 6,
+  "issues": [],
+  "retrieval": {
+    "bm25": {
+      "metrics": {
+        "k": 3,
+        "answerable": 10,
+        "unanswerable": 3,
+        "page_hit@3": 1.0,
+        "page_mrr@3": 0.95
+      },
+      "cases": [
+        {
+          "question": "What was the alarm threshold in the distance experiment?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "sensor_filter.pdf, p. 1",
+            "sensor_filter.pdf, p. 2",
+            "window_overlap.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "Which statistic was the distance filter based on?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "sensor_filter.pdf, p. 1",
+            "sensor_filter.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "What was the filtered distance at the spike?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            2
+          ],
+          "rank": 2,
+          "retrieved": [
+            "sensor_filter.pdf, p. 1",
+            "sensor_filter.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "How many filtered alarms remained on comparable interior positions?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "sensor_filter.pdf, p. 2",
+            "sensor_filter.pdf, p. 1",
+            "window_overlap.pdf, p. 1"
+          ]
+        },
+        {
+          "question": "Which phrase was used as the boundary probe?",
+          "answerable": true,
+          "expected": [
+            "window_overlap.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "window_overlap.pdf, p. 1",
+            "window_overlap.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "What was the passage width in the boundary experiment?",
+          "answerable": true,
+          "expected": [
+            "window_overlap.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "window_overlap.pdf, p. 1",
+            "window_overlap.pdf, p. 2",
+            "retrieval_ranks.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "How many passages did the overlapping index store?",
+          "answerable": true,
+          "expected": [
+            "window_overlap.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "window_overlap.pdf, p. 2",
+            "window_overlap.pdf, p. 1"
+          ]
+        },
+        {
+          "question": "How many questions did the ranking collection contain?",
+          "answerable": true,
+          "expected": [
+            "retrieval_ranks.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "retrieval_ranks.pdf, p. 1",
+            "retrieval_ranks.pdf, p. 2",
+            "sensor_filter.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "What was the mean reciprocal rank?",
+          "answerable": true,
+          "expected": [
+            "retrieval_ranks.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "retrieval_ranks.pdf, p. 2",
+            "retrieval_ranks.pdf, p. 1"
+          ]
+        },
+        {
+          "question": "What was the hit rate at cutoff three?",
+          "answerable": true,
+          "expected": [
+            "retrieval_ranks.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "retrieval_ranks.pdf, p. 2",
+            "retrieval_ranks.pdf, p. 1",
+            "sensor_filter.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "Which chemical element powers a nuclear submarine?",
+          "answerable": false,
+          "expected": null,
+          "rank": null,
+          "retrieved": []
+        },
+        {
+          "question": "Who manufactured the distance sensor?",
+          "answerable": false,
+          "expected": null,
+          "rank": null,
+          "retrieved": [
+            "sensor_filter.pdf, p. 2",
+            "sensor_filter.pdf, p. 1"
+          ]
+        },
+        {
+          "question": "What was the GPU memory usage of the overlapping index?",
+          "answerable": false,
+          "expected": null,
+          "rank": null,
+          "retrieved": [
+            "window_overlap.pdf, p. 2",
+            "window_overlap.pdf, p. 1"
+          ]
+        }
+      ],
+      "build_ms": 0.4595049999807088,
+      "latency_ms": {
+        "median": 0.006844999916211236,
+        "p95": 0.010004999921875424,
+        "min": 0.003966000122090918,
+        "max": 0.04383500004223606,
+        "count": 390
+      }
+    },
+    "tfidf": {
+      "metrics": {
+        "k": 3,
+        "answerable": 10,
+        "unanswerable": 3,
+        "page_hit@3": 1.0,
+        "page_mrr@3": 0.95
+      },
+      "cases": [
+        {
+          "question": "What was the alarm threshold in the distance experiment?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "sensor_filter.pdf, p. 1",
+            "sensor_filter.pdf, p. 2",
+            "window_overlap.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "Which statistic was the distance filter based on?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "sensor_filter.pdf, p. 1",
+            "sensor_filter.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "What was the filtered distance at the spike?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            2
+          ],
+          "rank": 2,
+          "retrieved": [
+            "sensor_filter.pdf, p. 1",
+            "sensor_filter.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "How many filtered alarms remained on comparable interior positions?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "sensor_filter.pdf, p. 2",
+            "sensor_filter.pdf, p. 1",
+            "window_overlap.pdf, p. 1"
+          ]
+        },
+        {
+          "question": "Which phrase was used as the boundary probe?",
+          "answerable": true,
+          "expected": [
+            "window_overlap.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "window_overlap.pdf, p. 1",
+            "window_overlap.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "What was the passage width in the boundary experiment?",
+          "answerable": true,
+          "expected": [
+            "window_overlap.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "window_overlap.pdf, p. 1",
+            "window_overlap.pdf, p. 2",
+            "retrieval_ranks.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "How many passages did the overlapping index store?",
+          "answerable": true,
+          "expected": [
+            "window_overlap.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "window_overlap.pdf, p. 2",
+            "window_overlap.pdf, p. 1"
+          ]
+        },
+        {
+          "question": "How many questions did the ranking collection contain?",
+          "answerable": true,
+          "expected": [
+            "retrieval_ranks.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "retrieval_ranks.pdf, p. 1",
+            "retrieval_ranks.pdf, p. 2",
+            "sensor_filter.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "What was the mean reciprocal rank?",
+          "answerable": true,
+          "expected": [
+            "retrieval_ranks.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "retrieval_ranks.pdf, p. 2",
+            "retrieval_ranks.pdf, p. 1"
+          ]
+        },
+        {
+          "question": "What was the hit rate at cutoff three?",
+          "answerable": true,
+          "expected": [
+            "retrieval_ranks.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "retrieval_ranks.pdf, p. 2",
+            "retrieval_ranks.pdf, p. 1",
+            "sensor_filter.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "Which chemical element powers a nuclear submarine?",
+          "answerable": false,
+          "expected": null,
+          "rank": null,
+          "retrieved": []
+        },
+        {
+          "question": "Who manufactured the distance sensor?",
+          "answerable": false,
+          "expected": null,
+          "rank": null,
+          "retrieved": [
+            "sensor_filter.pdf, p. 2",
+            "sensor_filter.pdf, p. 1"
+          ]
+        },
+        {
+          "question": "What was the GPU memory usage of the overlapping index?",
+          "answerable": false,
+          "expected": null,
+          "rank": null,
+          "retrieved": [
+            "window_overlap.pdf, p. 2",
+            "window_overlap.pdf, p. 1"
+          ]
+        }
+      ],
+      "build_ms": 0.3834629999346362,
+      "latency_ms": {
+        "median": 0.014577000001736451,
+        "p95": 0.025858000071821152,
+        "min": 0.008492999995723949,
+        "max": 0.8517109999957029,
+        "count": 390
+      }
+    },
+    "hybrid": {
+      "metrics": {
+        "k": 3,
+        "answerable": 10,
+        "unanswerable": 3,
+        "page_hit@3": 1.0,
+        "page_mrr@3": 0.95
+      },
+      "cases": [
+        {
+          "question": "What was the alarm threshold in the distance experiment?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "sensor_filter.pdf, p. 1",
+            "sensor_filter.pdf, p. 2",
+            "window_overlap.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "Which statistic was the distance filter based on?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "sensor_filter.pdf, p. 1",
+            "sensor_filter.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "What was the filtered distance at the spike?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            2
+          ],
+          "rank": 2,
+          "retrieved": [
+            "sensor_filter.pdf, p. 1",
+            "sensor_filter.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "How many filtered alarms remained on comparable interior positions?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "sensor_filter.pdf, p. 2",
+            "sensor_filter.pdf, p. 1",
+            "window_overlap.pdf, p. 1"
+          ]
+        },
+        {
+          "question": "Which phrase was used as the boundary probe?",
+          "answerable": true,
+          "expected": [
+            "window_overlap.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "window_overlap.pdf, p. 1",
+            "window_overlap.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "What was the passage width in the boundary experiment?",
+          "answerable": true,
+          "expected": [
+            "window_overlap.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "window_overlap.pdf, p. 1",
+            "window_overlap.pdf, p. 2",
+            "retrieval_ranks.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "How many passages did the overlapping index store?",
+          "answerable": true,
+          "expected": [
+            "window_overlap.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "window_overlap.pdf, p. 2",
+            "window_overlap.pdf, p. 1"
+          ]
+        },
+        {
+          "question": "How many questions did the ranking collection contain?",
+          "answerable": true,
+          "expected": [
+            "retrieval_ranks.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "retrieval_ranks.pdf, p. 1",
+            "retrieval_ranks.pdf, p. 2",
+            "sensor_filter.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "What was the mean reciprocal rank?",
+          "answerable": true,
+          "expected": [
+            "retrieval_ranks.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "retrieval_ranks.pdf, p. 2",
+            "retrieval_ranks.pdf, p. 1"
+          ]
+        },
+        {
+          "question": "What was the hit rate at cutoff three?",
+          "answerable": true,
+          "expected": [
+            "retrieval_ranks.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "retrieval_ranks.pdf, p. 2",
+            "retrieval_ranks.pdf, p. 1",
+            "sensor_filter.pdf, p. 2"
+          ]
+        },
+        {
+          "question": "Which chemical element powers a nuclear submarine?",
+          "answerable": false,
+          "expected": null,
+          "rank": null,
+          "retrieved": []
+        },
+        {
+          "question": "Who manufactured the distance sensor?",
+          "answerable": false,
+          "expected": null,
+          "rank": null,
+          "retrieved": [
+            "sensor_filter.pdf, p. 2",
+            "sensor_filter.pdf, p. 1"
+          ]
+        },
+        {
+          "question": "What was the GPU memory usage of the overlapping index?",
+          "answerable": false,
+          "expected": null,
+          "rank": null,
+          "retrieved": [
+            "window_overlap.pdf, p. 2",
+            "window_overlap.pdf, p. 1"
+          ]
+        }
+      ],
+      "build_ms": 0.3074920000472048,
+      "latency_ms": {
+        "median": 0.016729999970266363,
+        "p95": 0.0259380001352838,
+        "min": 0.009943999884853838,
+        "max": 0.10633600004439359,
+        "count": 390
+      }
+    }
+  },
+  "answers": {
+    "extractive": {
+      "metrics": {
+        "k": 3,
+        "answerable": 10,
+        "unanswerable": 3,
+        "page_hit@3": 1.0,
+        "page_mrr@3": 0.95,
+        "answer_exact_match": 0.0,
+        "answer_and_page_correct": 0.0,
+        "reference_containment_and_page": 0.7,
+        "accepted_answer_rate": 0.9,
+        "unanswerable_abstention_rate": 1.0
+      },
+      "cases": [
+        {
+          "question": "What was the alarm threshold in the distance experiment?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "sensor_filter.pdf, p. 1",
+            "sensor_filter.pdf, p. 2",
+            "window_overlap.pdf, p. 2"
+          ],
+          "status": "answered",
+          "answer": "PAPERLAB / TEACHING COLLECTION Detecting a distance spike The alarm threshold was 80 centimetres",
+          "citation": "sensor_filter.pdf, p. 1",
+          "quote": "PAPERLAB / TEACHING COLLECTION Detecting a distance spike The alarm threshold was 80 centimetres.",
+          "latency_ms": 0.7170530000166764,
+          "exact_match": false,
+          "correct_page": true,
+          "reference_in_response": true
+        },
+        {
+          "question": "Which statistic was the distance filter based on?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "sensor_filter.pdf, p. 1",
+            "sensor_filter.pdf, p. 2"
+          ],
+          "status": "no_supported_span",
+          "answer": "I could not verify an answer in the retrieved passages.",
+          "citation": null,
+          "quote": null,
+          "latency_ms": 0.09996699986913882,
+          "exact_match": false,
+          "correct_page": false,
+          "reference_in_response": false
+        },
+        {
+          "question": "What was the filtered distance at the spike?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            2
+          ],
+          "rank": 2,
+          "retrieved": [
+            "sensor_filter.pdf, p. 1",
+            "sensor_filter.pdf, p. 2"
+          ],
+          "status": "answered",
+          "answer": "PAPERLAB / TEACHING COLLECTION Detecting a distance spike The alarm threshold was 80 centimetres",
+          "citation": "sensor_filter.pdf, p. 1",
+          "quote": "PAPERLAB / TEACHING COLLECTION Detecting a distance spike The alarm threshold was 80 centimetres.",
+          "latency_ms": 0.07333700000344834,
+          "exact_match": false,
+          "correct_page": false,
+          "reference_in_response": false
+        },
+        {
+          "question": "How many filtered alarms remained on comparable interior positions?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "sensor_filter.pdf, p. 2",
+            "sensor_filter.pdf, p. 1",
+            "window_overlap.pdf, p. 1"
+          ],
+          "status": "answered",
+          "answer": "Filtered interior readings 42 43 44 (centimetres) Alarm count on comparable interior positions raw = 1 filtered = 0 Scope of the result The filter removed the alarm on this constructed trace",
+          "citation": "sensor_filter.pdf, p. 2",
+          "quote": "Filtered interior readings 42 43 44 (centimetres) Alarm count on comparable interior positions raw = 1 filtered = 0 Scope of the result The filter removed the alarm on this constructed trace.",
+          "latency_ms": 0.45013099997959216,
+          "exact_match": false,
+          "correct_page": true,
+          "reference_in_response": true
+        },
+        {
+          "question": "Which phrase was used as the boundary probe?",
+          "answerable": true,
+          "expected": [
+            "window_overlap.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "window_overlap.pdf, p. 1",
+            "window_overlap.pdf, p. 2"
+          ],
+          "status": "answered",
+          "answer": "PAPERLAB / TEACHING COLLECTION Constructing a boundary probe The boundary probe was the phrase maple oak",
+          "citation": "window_overlap.pdf, p. 1",
+          "quote": "PAPERLAB / TEACHING COLLECTION Constructing a boundary probe The boundary probe was the phrase maple oak.",
+          "latency_ms": 0.42894000011983735,
+          "exact_match": false,
+          "correct_page": true,
+          "reference_in_response": true
+        },
+        {
+          "question": "What was the passage width in the boundary experiment?",
+          "answerable": true,
+          "expected": [
+            "window_overlap.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "window_overlap.pdf, p. 1",
+            "window_overlap.pdf, p. 2",
+            "retrieval_ranks.pdf, p. 2"
+          ],
+          "status": "answered",
+          "answer": "Passage boundary experiment 1 / 2",
+          "citation": "window_overlap.pdf, p. 1",
+          "quote": "Passage boundary experiment 1 / 2",
+          "latency_ms": 0.18402000000605767,
+          "exact_match": false,
+          "correct_page": true,
+          "reference_in_response": false
+        },
+        {
+          "question": "How many passages did the overlapping index store?",
+          "answerable": true,
+          "expected": [
+            "window_overlap.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "window_overlap.pdf, p. 2",
+            "window_overlap.pdf, p. 1"
+          ],
+          "status": "answered",
+          "answer": "PAPERLAB / TEACHING COLLECTION Counting boundary matches The overlapping index stored five passages",
+          "citation": "window_overlap.pdf, p. 2",
+          "quote": "PAPERLAB / TEACHING COLLECTION Counting boundary matches The overlapping index stored five passages.",
+          "latency_ms": 0.30319500001496635,
+          "exact_match": false,
+          "correct_page": true,
+          "reference_in_response": true
+        },
+        {
+          "question": "How many questions did the ranking collection contain?",
+          "answerable": true,
+          "expected": [
+            "retrieval_ranks.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "retrieval_ranks.pdf, p. 1",
+            "retrieval_ranks.pdf, p. 2",
+            "sensor_filter.pdf, p. 2"
+          ],
+          "status": "answered",
+          "answer": "PAPERLAB / TEACHING COLLECTION Recording the first relevant rank The ranking collection contained four questions",
+          "citation": "retrieval_ranks.pdf, p. 1",
+          "quote": "PAPERLAB / TEACHING COLLECTION Recording the first relevant rank The ranking collection contained four questions.",
+          "latency_ms": 0.21546699986174644,
+          "exact_match": false,
+          "correct_page": true,
+          "reference_in_response": true
+        },
+        {
+          "question": "What was the mean reciprocal rank?",
+          "answerable": true,
+          "expected": [
+            "retrieval_ranks.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "retrieval_ranks.pdf, p. 2",
+            "retrieval_ranks.pdf, p. 1"
+          ],
+          "status": "answered",
+          "answer": "PAPERLAB / TEACHING COLLECTION Calculating retrieval scores The mean reciprocal rank was 0.4375",
+          "citation": "retrieval_ranks.pdf, p. 2",
+          "quote": "PAPERLAB / TEACHING COLLECTION Calculating retrieval scores The mean reciprocal rank was 0.4375.",
+          "latency_ms": 0.22476000003734953,
+          "exact_match": false,
+          "correct_page": true,
+          "reference_in_response": true
+        },
+        {
+          "question": "What was the hit rate at cutoff three?",
+          "answerable": true,
+          "expected": [
+            "retrieval_ranks.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "retrieval_ranks.pdf, p. 2",
+            "retrieval_ranks.pdf, p. 1",
+            "sensor_filter.pdf, p. 2"
+          ],
+          "status": "answered",
+          "answer": "Reciprocal ranks 1.00 0.50 0.25 0.00 Sum of reciprocal ranks 1.75 Hit rate The hit rate at cutoff three was 0.50",
+          "citation": "retrieval_ranks.pdf, p. 2",
+          "quote": "Reciprocal ranks 1.00 0.50 0.25 0.00 Sum of reciprocal ranks 1.75 Hit rate The hit rate at cutoff three was 0.50.",
+          "latency_ms": 0.289084999849365,
+          "exact_match": false,
+          "correct_page": true,
+          "reference_in_response": true
+        },
+        {
+          "question": "Which chemical element powers a nuclear submarine?",
+          "answerable": false,
+          "expected": null,
+          "rank": null,
+          "retrieved": [],
+          "status": "low_retrieval",
+          "answer": "I could not find enough relevant text in these papers.",
+          "citation": null,
+          "quote": null,
+          "latency_ms": 0.006539999958476983
+        },
+        {
+          "question": "Who manufactured the distance sensor?",
+          "answerable": false,
+          "expected": null,
+          "rank": null,
+          "retrieved": [
+            "sensor_filter.pdf, p. 2",
+            "sensor_filter.pdf, p. 1"
+          ],
+          "status": "no_supported_span",
+          "answer": "I could not verify an answer in the retrieved passages.",
+          "citation": null,
+          "quote": null,
+          "latency_ms": 0.03858699983538827
+        },
+        {
+          "question": "What was the GPU memory usage of the overlapping index?",
+          "answerable": false,
+          "expected": null,
+          "rank": null,
+          "retrieved": [
+            "window_overlap.pdf, p. 2",
+            "window_overlap.pdf, p. 1"
+          ],
+          "status": "low_retrieval",
+          "answer": "I could not find enough relevant text in these papers.",
+          "citation": null,
+          "quote": null,
+          "latency_ms": 0.008752999974603881
+        }
+      ],
+      "model_load_ms": 0,
+      "latency_ms": {
+        "median": 0.21546699986174644,
+        "p95": 0.7170530000166764,
+        "min": 0.006539999958476983,
+        "max": 0.7170530000166764,
+        "count": 13
+      }
+    },
+    "flan": {
+      "metrics": {
+        "k": 3,
+        "answerable": 10,
+        "unanswerable": 3,
+        "page_hit@3": 1.0,
+        "page_mrr@3": 0.95,
+        "answer_exact_match": 0.7,
+        "answer_and_page_correct": 0.7,
+        "reference_containment_and_page": 0.7,
+        "accepted_answer_rate": 1.0,
+        "unanswerable_abstention_rate": 1.0
+      },
+      "cases": [
+        {
+          "question": "What was the alarm threshold in the distance experiment?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "sensor_filter.pdf, p. 1",
+            "sensor_filter.pdf, p. 2",
+            "window_overlap.pdf, p. 2"
+          ],
+          "status": "answered",
+          "answer": "80 centimetres",
+          "citation": "sensor_filter.pdf, p. 1",
+          "quote": "PAPERLAB / TEACHING COLLECTION Detecting a distance spike The alarm threshold was 80 centimetres.",
+          "latency_ms": 1172.078190999855,
+          "exact_match": true,
+          "correct_page": true,
+          "reference_in_response": true
+        },
+        {
+          "question": "Which statistic was the distance filter based on?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "sensor_filter.pdf, p. 1",
+            "sensor_filter.pdf, p. 2"
+          ],
+          "status": "answered",
+          "answer": "A filtered value was calculated only where a sample had a neighbor on both sides. This choice leaves the first and last positions without a filtered value. Distance filtering experiment 1 / 2",
+          "citation": "sensor_filter.pdf, p. 1",
+          "quote": "A filtered value was calculated only where a sample had a neighbor on both sides. This choice leaves the first and last positions without a filtered value. Distance filtering experiment 1 / 2",
+          "latency_ms": 1941.040269000041,
+          "exact_match": false,
+          "correct_page": true,
+          "reference_in_response": false
+        },
+        {
+          "question": "What was the filtered distance at the spike?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            2
+          ],
+          "rank": 2,
+          "retrieved": [
+            "sensor_filter.pdf, p. 1",
+            "sensor_filter.pdf, p. 2"
+          ],
+          "status": "answered",
+          "answer": "80 centimetres",
+          "citation": "sensor_filter.pdf, p. 1",
+          "quote": "PAPERLAB / TEACHING COLLECTION Detecting a distance spike The alarm threshold was 80 centimetres.",
+          "latency_ms": 586.5291380000599,
+          "exact_match": false,
+          "correct_page": false,
+          "reference_in_response": false
+        },
+        {
+          "question": "How many filtered alarms remained on comparable interior positions?",
+          "answerable": true,
+          "expected": [
+            "sensor_filter.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "sensor_filter.pdf, p. 2",
+            "sensor_filter.pdf, p. 1",
+            "window_overlap.pdf, p. 1"
+          ],
+          "status": "answered",
+          "answer": "1",
+          "citation": "sensor_filter.pdf, p. 2",
+          "quote": "Filtered interior readings 42 43 44 (centimetres) Alarm count on comparable interior positions raw = 1 filtered = 0 Scope of the result The filter removed the alarm on this constructed trace.",
+          "latency_ms": 408.00582099996063,
+          "exact_match": false,
+          "correct_page": true,
+          "reference_in_response": false
+        },
+        {
+          "question": "Which phrase was used as the boundary probe?",
+          "answerable": true,
+          "expected": [
+            "window_overlap.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "window_overlap.pdf, p. 1",
+            "window_overlap.pdf, p. 2"
+          ],
+          "status": "answered",
+          "answer": "maple oak",
+          "citation": "window_overlap.pdf, p. 1",
+          "quote": "PAPERLAB / TEACHING COLLECTION Constructing a boundary probe The boundary probe was the phrase maple oak.",
+          "latency_ms": 332.9337669999859,
+          "exact_match": true,
+          "correct_page": true,
+          "reference_in_response": true
+        },
+        {
+          "question": "What was the passage width in the boundary experiment?",
+          "answerable": true,
+          "expected": [
+            "window_overlap.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "window_overlap.pdf, p. 1",
+            "window_overlap.pdf, p. 2",
+            "retrieval_ranks.pdf, p. 2"
+          ],
+          "status": "answered",
+          "answer": "four tokens",
+          "citation": "window_overlap.pdf, p. 1",
+          "quote": "Input sequence, first half birch cedar elm maple oak pine Input sequence, second half reed sage teak vine willow yew Index construction The passage width was four tokens.",
+          "latency_ms": 345.8587519999128,
+          "exact_match": true,
+          "correct_page": true,
+          "reference_in_response": true
+        },
+        {
+          "question": "How many passages did the overlapping index store?",
+          "answerable": true,
+          "expected": [
+            "window_overlap.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "window_overlap.pdf, p. 2",
+            "window_overlap.pdf, p. 1"
+          ],
+          "status": "answered",
+          "answer": "five",
+          "citation": "window_overlap.pdf, p. 2",
+          "quote": "PAPERLAB / TEACHING COLLECTION Counting boundary matches The overlapping index stored five passages.",
+          "latency_ms": 334.6558170001117,
+          "exact_match": true,
+          "correct_page": true,
+          "reference_in_response": true
+        },
+        {
+          "question": "How many questions did the ranking collection contain?",
+          "answerable": true,
+          "expected": [
+            "retrieval_ranks.pdf",
+            1
+          ],
+          "rank": 1,
+          "retrieved": [
+            "retrieval_ranks.pdf, p. 1",
+            "retrieval_ranks.pdf, p. 2",
+            "sensor_filter.pdf, p. 2"
+          ],
+          "status": "answered",
+          "answer": "four",
+          "citation": "retrieval_ranks.pdf, p. 1",
+          "quote": "PAPERLAB / TEACHING COLLECTION Recording the first relevant rank The ranking collection contained four questions.",
+          "latency_ms": 190.0015710000389,
+          "exact_match": true,
+          "correct_page": true,
+          "reference_in_response": true
+        },
+        {
+          "question": "What was the mean reciprocal rank?",
+          "answerable": true,
+          "expected": [
+            "retrieval_ranks.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "retrieval_ranks.pdf, p. 2",
+            "retrieval_ranks.pdf, p. 1"
+          ],
+          "status": "answered",
+          "answer": "0.4375",
+          "citation": "retrieval_ranks.pdf, p. 2",
+          "quote": "PAPERLAB / TEACHING COLLECTION Calculating retrieval scores The mean reciprocal rank was 0.4375.",
+          "latency_ms": 322.94296299983216,
+          "exact_match": true,
+          "correct_page": true,
+          "reference_in_response": true
+        },
+        {
+          "question": "What was the hit rate at cutoff three?",
+          "answerable": true,
+          "expected": [
+            "retrieval_ranks.pdf",
+            2
+          ],
+          "rank": 1,
+          "retrieved": [
+            "retrieval_ranks.pdf, p. 2",
+            "retrieval_ranks.pdf, p. 1",
+            "sensor_filter.pdf, p. 2"
+          ],
+          "status": "answered",
+          "answer": "0.50",
+          "citation": "retrieval_ranks.pdf, p. 2",
+          "quote": "Reciprocal ranks 1.00 0.50 0.25 0.00 Sum of reciprocal ranks 1.75 Hit rate The hit rate at cutoff three was 0.50.",
+          "latency_ms": 276.9979099998636,
+          "exact_match": true,
+          "correct_page": true,
+          "reference_in_response": true
+        },
+        {
+          "question": "Which chemical element powers a nuclear submarine?",
+          "answerable": false,
+          "expected": null,
+          "rank": null,
+          "retrieved": [],
+          "status": "low_retrieval",
+          "answer": "I could not find enough relevant text in these papers.",
+          "citation": null,
+          "quote": null,
+          "latency_ms": 0.01102599981095409
+        },
+        {
+          "question": "Who manufactured the distance sensor?",
+          "answerable": false,
+          "expected": null,
+          "rank": null,
+          "retrieved": [
+            "sensor_filter.pdf, p. 2",
+            "sensor_filter.pdf, p. 1"
+          ],
+          "status": "no_supported_span",
+          "answer": "I could not verify an answer in the retrieved passages.",
+          "citation": null,
+          "quote": null,
+          "latency_ms": 1187.814722999974
+        },
+        {
+          "question": "What was the GPU memory usage of the overlapping index?",
+          "answerable": false,
+          "expected": null,
+          "rank": null,
+          "retrieved": [
+            "window_overlap.pdf, p. 2",
+            "window_overlap.pdf, p. 1"
+          ],
+          "status": "low_retrieval",
+          "answer": "I could not find enough relevant text in these papers.",
+          "citation": null,
+          "quote": null,
+          "latency_ms": 0.01667400010774145
+        }
+      ],
+      "model_load_ms": 3184.556380999993,
+      "latency_ms": {
+        "median": 334.6558170001117,
+        "p95": 1941.040269000041,
+        "min": 0.01102599981095409,
+        "max": 1941.040269000041,
+        "count": 13
+      }
+    }
+  },
+  "chunk_ablation": [
+    {
+      "size": 65,
+      "overlap": 0,
+      "chunks": 12,
+      "k": 3,
+      "answerable": 10,
+      "unanswerable": 3,
+      "page_hit@3": 1.0,
+      "page_mrr@3": 0.95
+    },
+    {
+      "size": 65,
+      "overlap": 14,
+      "chunks": 12,
+      "k": 3,
+      "answerable": 10,
+      "unanswerable": 3,
+      "page_hit@3": 1.0,
+      "page_mrr@3": 1.0
+    },
+    {
+      "size": 130,
+      "overlap": 0,
+      "chunks": 6,
+      "k": 3,
+      "answerable": 10,
+      "unanswerable": 3,
+      "page_hit@3": 1.0,
+      "page_mrr@3": 0.95
+    },
+    {
+      "size": 130,
+      "overlap": 28,
+      "chunks": 6,
+      "k": 3,
+      "answerable": 10,
+      "unanswerable": 3,
+      "page_hit@3": 1.0,
+      "page_mrr@3": 0.95
+    },
+    {
+      "size": 200,
+      "overlap": 40,
+      "chunks": 6,
+      "k": 3,
+      "answerable": 10,
+      "unanswerable": 3,
+      "page_hit@3": 1.0,
+      "page_mrr@3": 0.95
+    }
+  ],
+  "process_peak_rss_mib_linux": 763.32421875,
+  "memory_note": "Whole process peak RSS, including model loading and evaluation; not isolated model memory. Linux units."
+}

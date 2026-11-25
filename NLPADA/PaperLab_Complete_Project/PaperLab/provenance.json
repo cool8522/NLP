@@ -1,0 +1,6 @@
+{
+  "source": "User supplied Basic.ipynb",
+  "notebook_sha256": "f209bd2caa3e63b6ec7e8c771c4972761a092ad4ed2b2925ac084397cf3adf36",
+  "embedded_data_sha256": "93e401b088f155d99fadcf11e172909a0ce1256869ef1e6c7d11de6ef58dd5c0",
+  "note": "Tokenizer, NumPy transformer, training, BM25, FLAN adapter and starter fixtures adapted from the supplied notebook. New application, evaluation, tests and documentation added."
+}

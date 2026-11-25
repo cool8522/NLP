@@ -1,0 +1,227 @@
+{
+  "format": 1,
+  "project": "PaperLab",
+  "files": [
+    {
+      "path": ".gitignore",
+      "size_bytes": 43,
+      "sha256": "cfc51e5064aece2d66de42a0e4e0e63085b47bb6c194d728bfa045a3f48e78c6"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 6525,
+      "sha256": "01324c9f306250c5e13f6b5e5b28d2aed5ebfca88eadbc2055678d33b1091861"
+    },
+    {
+      "path": "data/starter/corpus.jsonl",
+      "size_bytes": 14760,
+      "sha256": "1b604b2c3f80d05a444a1449ff3a4f58305ae2f2b0d5b7c23c428ef7bd926ad2"
+    },
+    {
+      "path": "data/starter/papers/retrieval_ranks.pdf",
+      "size_bytes": 4130,
+      "sha256": "aae64a8441f8f71a9394162a27676d762e3701e9eddef400b3e14509ce387ff3"
+    },
+    {
+      "path": "data/starter/papers/sensor_filter.pdf",
+      "size_bytes": 4229,
+      "sha256": "7e3830c289f142e0676092b150d24024fcd26a72fa1d9c145f3197975933759b"
+    },
+    {
+      "path": "data/starter/papers/window_overlap.pdf",
+      "size_bytes": 4112,
+      "sha256": "1d8e3bcd111a8df142ecbd6ece3cd99f8ea1ad8eacba465ab85b1fe87ecb69c1"
+    },
+    {
+      "path": "data/starter/qa.json",
+      "size_bytes": 1792,
+      "sha256": "4f1043b6871ccbc7c835f95d767592b8bbaae03ef0522eaccd0a28c1eecb0262"
+    },
+    {
+      "path": "docs/PROJECT_GUIDE.md",
+      "size_bytes": 52552,
+      "sha256": "c77cbe25238d97adccfda7957021231920e0e3228ccaeec7695b5a41994b616f"
+    },
+    {
+      "path": "docs/PaperLab_Project_Guide.pdf",
+      "size_bytes": 195231,
+      "sha256": "4ad7e04669b1579719e2729918b6bbc536bc5743ed729ee68b4d2ad1eda32799"
+    },
+    {
+      "path": "docs/figures/training_curve.png",
+      "size_bytes": 85464,
+      "sha256": "87c3994fb91e0b197b98c8d0893bed6868409c9e686cb7fc27db9cdd4e8cf79d"
+    },
+    {
+      "path": "notebooks/PaperLab_End_to_End.ipynb",
+      "size_bytes": 81147,
+      "sha256": "aaaeea9e134d410dc1728550ef8fe6159c38e5c732fa7fa63534557bdf3f7b87"
+    },
+    {
+      "path": "paperlab/__init__.py",
+      "size_bytes": 106,
+      "sha256": "0a8ce5ea7919dbc0931373b2b7b282e370f75102d601a5ed4af9134909b454f2"
+    },
+    {
+      "path": "paperlab/__main__.py",
+      "size_bytes": 4209,
+      "sha256": "328eb23eaa4ad1fd02083f37222a3d624638bb110c7f94f12ba24a788916b811"
+    },
+    {
+      "path": "paperlab/api.py",
+      "size_bytes": 4972,
+      "sha256": "16ed486f295b1afd3103c8f5ebca4380067ad1436b5804e34fb01804c954eea6"
+    },
+    {
+      "path": "paperlab/datasets.py",
+      "size_bytes": 3992,
+      "sha256": "8ad8215190a3a294607ffc4854f238a764ba17eab6685deb579f2a18477ac905"
+    },
+    {
+      "path": "paperlab/evaluation.py",
+      "size_bytes": 3203,
+      "sha256": "751b2d3c5fe2c6f9b3dc21862617c88098cf4532ccc3bece0745815e8b199fd0"
+    },
+    {
+      "path": "paperlab/generators.py",
+      "size_bytes": 4469,
+      "sha256": "46295f325e32474441cc4ff29170fa15d0d455cd43e930664d5b609735589b92"
+    },
+    {
+      "path": "paperlab/model.py",
+      "size_bytes": 7328,
+      "sha256": "c994a5be6c8c61c40b34ec47f0585a55c1f1fe520935bf42bf8828a6b5cd33c4"
+    },
+    {
+      "path": "paperlab/rag.py",
+      "size_bytes": 6102,
+      "sha256": "7ccceff18e6de0083cc4ee8a7c0b26d2e2735b0c5d54922ea6f60222890d5e6e"
+    },
+    {
+      "path": "paperlab/ranking.py",
+      "size_bytes": 2648,
+      "sha256": "2a339b638ec2555ed00dd77c702194042e27601d58e6ce9cd9d3e18e384a16fc"
+    },
+    {
+      "path": "paperlab/retrieval.py",
+      "size_bytes": 4847,
+      "sha256": "1f6f2060780212b869c55845a4e7a65eaa57bfbf689e2b0ae747b851c520b663"
+    },
+    {
+      "path": "paperlab/service.py",
+      "size_bytes": 4986,
+      "sha256": "16c093000b200be2c7b8d24c8bc7c28bce3cbceb0313e947edba85edf4f66f86"
+    },
+    {
+      "path": "paperlab/static/app.js",
+      "size_bytes": 8038,
+      "sha256": "b7c55d5bdd1efc0426ff0ede5bdce1b42c223ec3bf32a6b2b4ed9849d963705d"
+    },
+    {
+      "path": "paperlab/static/index.html",
+      "size_bytes": 4763,
+      "sha256": "39264741deab73f8aa6686f4be8993fc75ba6f5c4d56ab430b437dbde187c6dc"
+    },
+    {
+      "path": "paperlab/static/style.css",
+      "size_bytes": 6660,
+      "sha256": "5b1fb9287dafeaadf73a29cc48a64be9d03ef3ae6d25a10eb9c3a078218697a4"
+    },
+    {
+      "path": "paperlab/tokenizer.py",
+      "size_bytes": 3983,
+      "sha256": "baffd3e4c70d0304423dc2893d18620923ceed95c67ef08f268a6b9908bf620c"
+    },
+    {
+      "path": "paperlab/training.py",
+      "size_bytes": 8202,
+      "sha256": "5c9062de37385788af074837b737ab8e163eb1480b3e53dfcc232b8548e5b697"
+    },
+    {
+      "path": "provenance.json",
+      "size_bytes": 415,
+      "sha256": "147cfdd290bcaab625d6356f084d8bc86b957324bbd91ee9eb67c583f2e3cb6f"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "size_bytes": 71,
+      "sha256": "c848112db96b7b891ebe8f121415119e2d945c5537c4dc6864693bd8d9d3f6e6"
+    },
+    {
+      "path": "requirements-llm.txt",
+      "size_bytes": 102,
+      "sha256": "836497de9ca213d5904e0cdce8184e58388107df7f4b2ccfb0d5a2a1c55812a1"
+    },
+    {
+      "path": "requirements-tested.txt",
+      "size_bytes": 308,
+      "sha256": "818862314d46cbafff1a665fc935d0d5c96a59edf1a0ddc60fce7fb705a55495"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 85,
+      "sha256": "0e80126c5f435c42f2b06369c86b5bd9c9825d3c1315845b5463e2299f15bf2b"
+    },
+    {
+      "path": "run.py",
+      "size_bytes": 339,
+      "sha256": "affabf4f1d777ca80666c10ad96972ab66a5a0df4ce0b699e30d6fed8dd7e934"
+    },
+    {
+      "path": "runs/benchmark.json",
+      "size_bytes": 37193,
+      "sha256": "4ed738719a1192c614336a6881f4b34c3c4950d5578d61f100fa5a7c5d5c6d42"
+    },
+    {
+      "path": "runs/mini_gpt.npz",
+      "size_bytes": 301467,
+      "sha256": "8543d44060b08cbed2e079c22a7e42efe383d36b8e5288fe3792d5f0d57a0bf8"
+    },
+    {
+      "path": "runs/test_results.txt",
+      "size_bytes": 2676,
+      "sha256": "377d7b8b50c0a62bf8bfdd6268cd1906c686a2f90d1d53d5b9b08c09077cda54"
+    },
+    {
+      "path": "runs/tokenizer.json",
+      "size_bytes": 2245,
+      "sha256": "99bc117ee19b646b904710d9f1e51f82238445426c2e69904d0e5663a94874e7"
+    },
+    {
+      "path": "runs/training.json",
+      "size_bytes": 1536,
+      "sha256": "d1e291bc9f2bdbfd3341f761e448bea87b6f300b8a6e91305e31d310bb3152e0"
+    },
+    {
+      "path": "runs/verification.json",
+      "size_bytes": 1266,
+      "sha256": "70e24d4c882f7a51142bc3938d15cc8cbb59a335cb649a513c13c0ba6be44faa"
+    },
+    {
+      "path": "scripts/benchmark.py",
+      "size_bytes": 4282,
+      "sha256": "c63cc31155eb7dd1c1fab6c50df6d5bcc4f8ad4e2abdab49d6c9fac28c1cc875"
+    },
+    {
+      "path": "scripts/build_guide.py",
+      "size_bytes": 7941,
+      "sha256": "eeae1f5d8f2471d4a641a57294e5a27599283af230393d8be5d6aa9a53021d8f"
+    },
+    {
+      "path": "scripts/build_notebook.py",
+      "size_bytes": 11845,
+      "sha256": "6f7010e3a06fc995518d7171bd9e5ad325b919862806486439da6a63ac620c2c"
+    },
+    {
+      "path": "tests/test_api.py",
+      "size_bytes": 1924,
+      "sha256": "f6ad859c74e146b128a0248b35dbfae739dfe2727dab25bba72e313f73282553"
+    },
+    {
+      "path": "tests/test_core.py",
+      "size_bytes": 8442,
+      "sha256": "c37ecfbeb40c6a90c1527ab785a3985f0505702551c5a1bb219bb464ab44a466"
+    }
+  ],
+  "note": "Manifest excludes itself. Third-party published PDFs, QASPER downloads, virtual environments and user workspaces are not bundled."
+}
